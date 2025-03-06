@@ -1,0 +1,682 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scrollbar-width: thin; /* Makes the scrollbar thin */
+    scrollbar-color: #708090 #f4f4f4; /* Thumb color and track color */
+    scrollbar-arrow-color: #1d69a3;
+}
+
+:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-text-color);
+    background: white;
+
+
+
+
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.container {
+    max-width: 1250px;
+    margin-inline: auto;
+    overflow: hidden;
+    padding: 0 16px;
+}
+.max-width{
+    max-width: 1300;
+    margin-inline: auto;
+    overflow: hidden;
+    padding: 0 16px;
+}
+
+
+.nav1 {
+    border-bottom: 3px solid black;
+    /* background: linear-gradient(90deg, #b9def8, #e9f7fe, #f7f9ff); */
+    background: #011e29;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); /* Optional: Soft shadow */
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease; /* Smooth transition for any hover or shadow effect */
+}
+.nav-section2{
+    margin-top: 4.7rem;
+    position: fixed;
+    border: none;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:white;
+    
+}
+.nav2-links ul li{
+    margin-left: 1.2rem;
+}
+
+.nav-shadow {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7); /* Adds the shadow */
+    transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+
+
+.main-nav {
+    justify-content: space-between;
+    padding-block: 8px;
+
+}
+
+.company-logo{
+   /* position: absolute;
+   right: auto;
+   left: 2rem; */
+   margin-right: 4rem;
+}
+
+.company-logo img {
+    width: 55px;
+    border: 2px solid black;
+    
+}
+
+.nav-links ul {
+    gap: 16px;
+    color: black;
+    font-size: 1.14rem;
+}
+
+.nav-links ul.flex {
+    flex-wrap: wrap;
+}
+
+.hover-link {
+    cursor: pointer;
+}
+
+.hover-link:hover {
+    color: rgb(44, 0, 204);
+}
+
+.hover-link:active {
+    color: red;
+}
+
+.nav-item.active {
+    color: var(--accent-color);
+}
+
+.search-bar {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between input and button */
+    margin: 5px auto; /* Centering the search bar */
+    padding: 5px; /* Add some padding around */
+    max-width: 600px; /* Restrict maximum width */
+    /* background-color: #f0f8ff; Subtle background color */
+    border-radius: 8px; /* Rounded corners */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); Add shadow for depth */
+}
+
+.news-input {
+    width: 100%;
+    max-width: 400px; /* Input field maximum size */
+    padding: 12px 16px; /* Inner padding for a larger field */
+    font-size: 16px; /* Font size for readability */
+    border: 2px solid rgb(56, 55, 55); /* Border color */
+    border-radius:20px; /* Match button border radius */
+    outline: none; /* Remove outline on focus */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.news-input:focus {
+    border-color: black; /* Change border color on focus */
+    box-shadow: 0 0 8px rgba(34, 148, 237, 0.5); /* Glow effect */
+}
+
+.search-button {
+    font-weight: 700;
+    background-color: #fcba07; /* Same primary color as previous buttons */
+    color: black; /* Button text color */
+    padding: 12px 24px; /* Larger padding for emphasis */
+    font-size: 20px; /* Font size for consistency */
+    border: none; /* Remove default border */
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.search-button:hover {
+    background-color: #d69d00; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Remove border when the input is focused */
+
+.icon{
+    font-size: 1.3rem;
+    margin-right: .5rem;
+}
+
+
+
+
+
+.about {
+    display: flex;
+    gap: 12px; /* Space between buttons */
+    align-items: center;
+    
+}
+
+.about button {
+    
+    background-color: white; 
+    color: black; /* Text color */
+    border: 1px solid black; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Spacing inside the button */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.about button:hover {
+    color: white;
+    background-color: #2294ed; /* Darker shade for hover */
+    transform: translateY(-2px); /* Slightly lift the button */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Stronger shadow on hover */
+    
+}
+
+.about a button {
+    font-size: 1rem;
+    text-decoration: none; /* Remove underline from links */
+     color: black; 
+    font-family: "Poppins", sans-serif; /* Consistent font */
+}
+
+.about button a:hover {
+    color: #dceaff; /* Slightly lighter text color on hover */
+}
+
+
+main {
+    padding-block: 20px;
+    margin-top: 80px;
+    
+}
+
+
+.cards-container {
+    padding-top: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+    margin-top: 2rem;
+}
+
+.card {
+    width: 360px;
+    min-height: 400px;
+    box-shadow: 0 0 10px #d4ecff;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #fff;
+    overflow: hidden;
+    transition: box-shadow, background-color ,transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 1px 1px 12px 2px black;
+    background-color: #f9fdff;
+    transform: translateY(-4px);
+   
+}
+
+.card-header img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 12px;
+}
+
+.news-source {
+    margin-block: 12px;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .nav-links ul {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        padding-block: 12px;
+    }
+
+    .search-bar {
+        width: 100%;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .news-input {
+        width: 100%;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+
+    .cards-container {
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .company-logo img {
+        width: 80px;
+    }
+
+    .news-input {
+        padding-inline: 8px;
+    }
+
+    .search-button {
+        padding: 8px 16px;
+    }
+
+    .nav-links ul {
+        font-size: 14px;
+    }
+
+    .card-content h3 {
+        font-size: 16px;
+    }
+
+    .news-source {
+        font-size: 12px;
+    }
+}
+
+.main-container{
+    /* border: 3px solid black; */
+    width: 100%;
+    
+    margin: auto;
+    /* margin-top: 1rem; */
+    height: 200vh;
+    overflow: auto;
+    
+  
+  
+}
+
+
+
+/* About Section */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 90vh;
+    padding: 3rem;
+    background: url('news-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    margin-top: 4rem;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.3); /* Dark overlay for contrast */
+}
+
+
+
+/* About Us Block */
+.about-us {
+    width: 70%;
+    margin-bottom: 3rem;
+    background-color: rgba(0,0,0, 0.3); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.about-us h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.about-us p {
+    font-size: 1.2rem;
+    color: rgb(223, 223, 223);
+    line-height: 1.6;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 90%;
+}
+
+/* Card Styling */
+.aboutuscard {
+    width: 22%;
+    /* background-color: #ffffff; */
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.aboutuscard h2 {
+    font-size: 1.6rem;
+    color: #1f2c39;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.aboutuscard p {
+    font-size: 1rem;
+    color: #303939;
+    line-height: 1.6;
+}
+
+/* Card Hover Effect */
+.aboutuscard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.7);
+    border-color: black;
+    background-color: rgba(255,255,255, 0.8);
+    
+}
+.about-us:hover{
+    transform: translateY(-8px);
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.7);
+    border-color: black;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about-us {
+        width: 90%;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutuscard {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-us h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-us p {
+        font-size: 1rem;
+    }
+
+    .aboutuscard {
+        width: 90%;
+    }
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about-us {
+        width: 90%;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-us h1 {
+        font-size: 2rem;
+    }
+
+    .about-us p {
+        font-size: 1rem;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+.footer1{
+    width: 100%;
+    height: 45vh;
+   
+    background-color: #011e29;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.section1{
+    
+    margin-top: 3rem;
+    height: 35vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+.footer-box{
+    width: 42%;
+    height: 14rem;
+    margin: 1rem;
+  
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   
+
+
+}
+.footer-img{
+    border: 2px solid rgb(217, 82, 82);
+    width: 8.5rem;
+    height: 6rem;
+    background: url('Untitled\ design\ news.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+}
+.footer-box-heading{
+    display: flex;
+    gap: 2rem;
+    color: white;
+
+}
+.footer-box h1{
+font-size: 3.4rem;
+font-family:'Times New Roman', Times, serif;
+}
+.footer-box p{
+    color: white;
+    font-size: 1.1rem;
+}
+.footer-box button{
+    font-weight: 700;
+    background-color: white; 
+    color: black; /* Text color */
+    border: 1px solid black; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Spacing inside the button */
+    font-size: 19px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+.footer-box button:hover{
+    color: white;
+    background-color: #2294ed; /* Darker shade for hover */
+    transform: translateY(-2px); /* Slightly lift the button */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Stronger shadow on hover */
+}
+
+
+.mobile-app-section{
+ background: url('googleplay.webp');
+ background-repeat: no-repeat;
+ background-size: cover;
+ height: 100%;
+ width: 50%;
+
+border: 2px solid yellow;
+}
+#box3{
+    flex-direction: row;
+}
+.social-media-section{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-icon i{
+    font-size: 2.3rem;
+    margin: 1.4rem;
+}
+.faded-line {
+    width: 100%;
+    height: 2px; /* Thin line */
+    background: white;
+    border: none;
+  }
+  
+
+
+.footer2{
+    width: 100%;
+    height: 45vh;
+   
+    background-color: #011e29;
+    display: flex;
+   
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.footer2-box{
+width: 24%;
+height: 86%;
+padding: .4rem;
+color: white;
+text-align: center;
+}
+.footer2-box h2{
+    margin-bottom: 1.3rem;
+
+}
+.footer2-box p{
+    margin-top: .4rem;
+    
+}
+.footer2-box a{
+    color: #a7a7a7;
+}
+.footer2-box a:hover{
+    color: #d3cfcf;
+}
+.faded-line {
+    height: .8px; /* Thin line */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    border: none;
+    
+  }
+  .footer3{
+   
+    background-color: #011e29;
+    height: 2.5rem;
+
+  }
+  .footer3 p{
+    margin-left: 27rem;
+    color: white;
+    padding: .5rem;
+
+  }
+ 
+

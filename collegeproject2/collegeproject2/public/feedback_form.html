@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="form-wrapper">
+        <div class="form-container">
+            <h2>We value your Feedback</h2>
+            <p>Let us know what we can improve!</p>
+            <form id="feedbackForm" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="6d8ad128-9aaa-4232-8a54-5f5537892b86">
+
+                <div class="input-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="feedback">Your Feedback</label>
+                    <textarea id="feedback" name="feedback" placeholder="Write your feedback here..." required></textarea>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn-submit">Submit Feedback</button>
+                    <button type="button" id="resetButton" class="secondary-button">Reset</button>
+                </div>
+            </form>
+        </div>
+      
+    </div>
+
+    <script>
+        // Select the Reset button and form
+        const resetButton = document.getElementById('resetButton');
+        const feedbackForm = document.getElementById('feedbackForm');
+
+        // Add a click event listener to reset the form
+        resetButton.addEventListener('click', () => {
+            feedbackForm.reset();
+            alert('Form reset successfully!');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('./news-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.form-container {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.form-container h2 {
+    font-size: 1.8em;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.form-container p {
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.input-group textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* Button Styles */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.btn-submit,
+.secondary-button {
+    flex: 1;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-submit {
+    background: #007bff;
+    color: #fff;
+}
+
+.secondary-button {
+    background: #6c757d;
+    color: #fff;
+}
+
+.btn-submit:hover {
+    background: #0056b3;
+}
+
+.secondary-button:hover {
+    background: #5a6268;
+}
+
+.btn-submit:active,
+.secondary-button:active {
+    transform: scale(0.98);
+}
